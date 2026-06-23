@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360">
+<rect width="1600" height="360" fill="#070707"/>
+<defs><linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#EE6A02"/><stop offset="100%" stop-color="#FFB000"/></linearGradient></defs>
+<style>.label{font:600 24px Inter,Arial;fill:#E0E0E0}.line{fill:none;stroke:#E0E0E0;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:url(#o);stroke-width:10;stroke-linecap:round;stroke-linejoin:round}.fillO{fill:url(#o)}</style>
+<g transform="translate(80 70)"><rect x="0" y="50" width="150" height="120" rx="18" class="line"/><path d="M25 50V20h100v30" class="accent"/><path d="M40 170v45h70v-45" class="accent"/><text x="-8" y="265" class="label">Obra</text></g>
+<g transform="translate(360 70)"><path d="M20 170h160" class="line"/><rect x="35" y="100" width="25" height="70" class="fillO"/><rect x="80" y="65" width="25" height="105" fill="#E0E0E0"/><rect x="125" y="25" width="25" height="145" class="fillO"/><text x="0" y="265" class="label">Indicadores</text></g>
+<g transform="translate(650 70)"><path d="M95 20l75 35v75c0 60-45 95-75 110-30-15-75-50-75-110V55z" class="line"/><path d="M60 125l25 25 55-65" class="accent"/><text x="5" y="265" class="label">Controle</text></g>
+<g transform="translate(940 70)"><circle cx="85" cy="95" r="65" class="line"/><path d="M45 160l-25 55" class="accent"/><path d="M125 160l25 55" class="accent"/><text x="-4" y="265" class="label">Medição</text></g>
+<g transform="translate(1225 70)"><rect x="20" y="35" width="160" height="180" rx="24" class="line"/><path d="M55 85h90M55 125h90M55 165h55" class="accent"/><text x="20" y="265" class="label">Relatório</text></g>
+</svg>
