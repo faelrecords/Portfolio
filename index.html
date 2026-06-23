@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FortObra — Controle Financeiro de Obras</title>
+<link rel="icon" type="image/png" href="assets/fortobra_logo_referencia.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,6 +28,7 @@ body{margin:0;background:var(--black);color:var(--white);font-family:var(--font-
 h1,h2,h3,h4{font-family:var(--font-heading);letter-spacing:-.04em;font-weight:700}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* === GLASS CARD === */
 .glass{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:var(--radius-lg);box-shadow:var(--shadow-card)}
@@ -340,7 +342,9 @@ section{position:relative;z-index:1}
 </head>
 <body>
 
-<div class="grid-texture"></div>
+<div class="grid-texture" aria-hidden="true"></div>
+
+<main>
 
 <!-- HEADER -->
 <header id="header">
@@ -833,24 +837,24 @@ section{position:relative;z-index:1}
         <div class="register-form glass reveal reveal-delay-1">
           <h3>Solicitar demonstração</h3>
           <div class="form-group">
-            <label>Nome</label>
-            <input type="text" placeholder="Seu nome completo">
+            <label for="reg-nome">Nome</label>
+            <input type="text" id="reg-nome" placeholder="Seu nome completo">
           </div>
           <div class="form-group">
-            <label>Empresa</label>
-            <input type="text" placeholder="Nome da empresa">
+            <label for="reg-empresa">Empresa</label>
+            <input type="text" id="reg-empresa" placeholder="Nome da empresa">
           </div>
           <div class="form-group">
-            <label>E-mail profissional</label>
-            <input type="email" placeholder="email@empresa.com">
+            <label for="reg-email">E-mail profissional</label>
+            <input type="email" id="reg-email" placeholder="email@empresa.com">
           </div>
           <div class="form-group">
-            <label>WhatsApp</label>
-            <input type="tel" placeholder="(00) 00000-0000">
+            <label for="reg-whatsapp">WhatsApp</label>
+            <input type="tel" id="reg-whatsapp" placeholder="(00) 00000-0000">
           </div>
           <div class="form-group">
-            <label>Quantidade de obras ativas</label>
-            <select>
+            <label for="reg-obras">Quantidade de obras ativas</label>
+            <select id="reg-obras">
               <option value="">Selecione</option>
               <option>1 a 5</option>
               <option>6 a 15</option>
@@ -859,8 +863,8 @@ section{position:relative;z-index:1}
             </select>
           </div>
           <div class="form-group">
-            <label>Principal desafio financeiro</label>
-            <select>
+            <label for="reg-desafio">Principal desafio financeiro</label>
+            <select id="reg-desafio">
               <option value="">Selecione</option>
               <option>Controle de custos</option>
               <option>Visibilidade de despesas</option>
@@ -869,7 +873,7 @@ section{position:relative;z-index:1}
               <option>Relatórios para diretoria</option>
             </select>
           </div>
-          <button class="btn-primary" style="width:100%;margin-top:8px">Solicitar demonstração</button>
+          <button class="btn-primary" type="button" style="width:100%;margin-top:8px">Solicitar demonstração</button>
           <p class="form-microcopy">Responderemos com orientações para entender seu cenário e indicar o melhor fluxo de uso.</p>
         </div>
       </div>
@@ -880,10 +884,13 @@ section{position:relative;z-index:1}
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-7 9 7v12"/><path d="M9 21V13h6v8"/></svg>
             </div>
             <h3>Crie sua conta</h3>
-            <input type="text" placeholder="Nome da empresa">
-            <input type="email" placeholder="E-mail profissional">
-            <input type="tel" placeholder="Telefone/WhatsApp">
-            <button class="phone-btn">Solicitar demonstração</button>
+            <label for="phone-empresa" class="sr-only">Nome da empresa</label>
+            <input type="text" id="phone-empresa" placeholder="Nome da empresa" aria-label="Nome da empresa">
+            <label for="phone-email" class="sr-only">E-mail profissional</label>
+            <input type="email" id="phone-email" placeholder="E-mail profissional" aria-label="E-mail profissional">
+            <label for="phone-tel" class="sr-only">Telefone/WhatsApp</label>
+            <input type="tel" id="phone-tel" placeholder="Telefone/WhatsApp" aria-label="Telefone/WhatsApp">
+            <button class="phone-btn" type="button">Solicitar demonstração</button>
             <p class="phone-microcopy">Acesso orientado por especialista</p>
           </div>
         </div>
@@ -893,63 +900,63 @@ section{position:relative;z-index:1}
 </section>
 
 <!-- FAQ -->
-<section class="faq-section" id="faq">
+<section class="faq-section" id="faq" aria-label="Perguntas frequentes">
   <div class="container">
     <div class="reveal" style="text-align:center">
       <h2 class="section-title">Perguntas frequentes</h2>
     </div>
-    <div style="margin-top:48px">
-      <div class="faq-item reveal">
-        <button class="faq-question">
+    <div style="margin-top:48px" role="list">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           O FortObra substitui meu financeiro?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Não. Ele organiza a visão financeira da obra e ajuda sua equipe a acompanhar custos, receitas, fornecedores e margem por projeto.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           Posso controlar mais de uma obra?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Sim. A proposta é permitir visão por obra e visão consolidada, facilitando a comparação entre projetos.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           Serve para engenheiros autônomos?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Sim. O FortObra pode ser usado por engenheiros que precisam controlar custos de obras próprias ou de clientes.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           Serve para construtoras?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Sim. Construtoras podem usar o FortObra para acompanhar múltiplas obras, fornecedores, despesas, receitas e indicadores.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           O sistema gera relatórios?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Sim. O FortObra gera relatórios executivos, visão de indicadores e dados prontos para tomada de decisão.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           Preciso abandonar minhas planilhas?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Não necessariamente. O FortObra é uma evolução do controle manual — saia das planilhas soltas para uma visão mais organizada.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           O FortObra ajuda a saber se a obra está dando lucro?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">A proposta é acompanhar margem, custos e receitas para dar mais clareza sobre o desempenho financeiro da obra.</div></div>
       </div>
-      <div class="faq-item reveal">
-        <button class="faq-question">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" aria-expanded="false">
           Como faço para começar?
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
@@ -970,6 +977,8 @@ section{position:relative;z-index:1}
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -1040,10 +1049,12 @@ document.querySelectorAll('.faq-question').forEach(btn=>{
     document.querySelectorAll('.faq-item.open').forEach(i=>{
       i.classList.remove('open');
       i.querySelector('.faq-answer').style.maxHeight='0';
+      i.querySelector('.faq-question').setAttribute('aria-expanded','false');
     });
     if(!isOpen){
       item.classList.add('open');
       answer.style.maxHeight=answer.scrollHeight+'px';
+      btn.setAttribute('aria-expanded','true');
     }
   });
 });
