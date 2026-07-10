@@ -1,0 +1,37 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="base" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(910 525) rotate(90) scale(650 1050)">
+      <stop stop-color="#160C08"/><stop offset=".28" stop-color="#080706"/><stop offset="1" stop-color="#020202"/>
+    </radialGradient>
+    <linearGradient id="line" x1="186" y1="994" x2="1512" y2="125" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4E1D12" stop-opacity="0"/><stop offset=".3" stop-color="#A94D30" stop-opacity=".25"/><stop offset=".68" stop-color="#E07A52" stop-opacity=".72"/><stop offset="1" stop-color="#C15F3C" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="24"/></filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" stroke="white" stroke-opacity=".025"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#base)"/>
+  <rect width="1920" height="1080" fill="url(#grid)" opacity=".55"/>
+  <g opacity=".8" filter="url(#soft)">
+    <ellipse cx="680" cy="690" rx="480" ry="120" transform="rotate(-14 680 690)" fill="#C15F3C" fill-opacity=".08"/>
+    <ellipse cx="1330" cy="380" rx="420" ry="100" transform="rotate(16 1330 380)" fill="#C15F3C" fill-opacity=".055"/>
+  </g>
+  <g stroke="url(#line)" stroke-linecap="round">
+    <path d="M-80 1004C376 904 396 622 796 608C1163 594 1332 930 2000 684" stroke-width="2.2"/>
+    <path d="M-120 1046C330 958 438 696 783 666C1136 635 1394 879 2010 724" stroke-width="1.1" opacity=".65"/>
+    <path d="M-90 958C300 846 420 558 812 552C1217 546 1412 830 2006 628" stroke-width="1" opacity=".48"/>
+    <path d="M-70 885C344 792 460 490 850 505C1247 520 1460 742 1980 556" stroke-width=".8" opacity=".36"/>
+    <path d="M238 -10C440 270 688 284 860 514C1019 725 1048 992 1310 1122" stroke-width="1" opacity=".36"/>
+    <path d="M1578 -45C1472 211 1275 282 1084 486C882 702 894 907 690 1120" stroke-width="1.25" opacity=".42"/>
+    <path d="M1820 126C1592 286 1531 468 1334 571C1082 703 761 656 458 892" stroke-width="1.6" opacity=".38"/>
+  </g>
+  <g filter="url(#glow)" opacity=".6" fill="#C15F3C">
+    <circle cx="304" cy="835" r="4"/><circle cx="475" cy="770" r="3"/><circle cx="704" cy="644" r="4"/><circle cx="1126" cy="675" r="3"/><circle cx="1438" cy="748" r="4"/><circle cx="1620" cy="700" r="2.5"/>
+    <circle cx="1270" cy="350" r="3"/><circle cx="1510" cy="236" r="2.5"/><circle cx="925" cy="529" r="3"/>
+  </g>
+  <g fill="#DF7850">
+    <circle cx="304" cy="835" r="1.5"/><circle cx="475" cy="770" r="1"/><circle cx="704" cy="644" r="1.5"/><circle cx="1126" cy="675" r="1"/><circle cx="1438" cy="748" r="1.5"/><circle cx="1620" cy="700" r="1"/>
+    <circle cx="1270" cy="350" r="1.2"/><circle cx="1510" cy="236" r="1"/><circle cx="925" cy="529" r="1.2"/>
+  </g>
+  <rect width="1920" height="1080" fill="url(#base)" opacity=".12"/>
+</svg>

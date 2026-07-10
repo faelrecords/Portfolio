@@ -1,0 +1,11 @@
+{
+  "name": "Fael Records — Vibecodex",
+  "short_name": "Vibecodex",
+  "start_url": "/home/",
+  "display": "standalone",
+  "background_color": "#070707",
+  "theme_color": "#070707",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

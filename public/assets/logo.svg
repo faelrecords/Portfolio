@@ -1,0 +1,15 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="copper" x1="6" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E1845E"/><stop offset="0.5" stop-color="#C15F3C"/><stop offset="1" stop-color="#8E3B24"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(2 2)">
+    <path d="M13 13.5C13 9.358 16.358 6 20.5 6H49L42.5 14H23V25.5H42L35.5 33.5H23V51H13V13.5Z" fill="url(#copper)"/>
+    <path d="M28 20H44.5C50.851 20 56 25.149 56 31.5C56 36.402 52.933 40.59 48.615 42.243L57 52H45L37.5 43.5H28L34.5 35.5H43.5C45.433 35.5 47 33.933 47 32C47 30.067 45.433 28.5 43.5 28.5H21.5L28 20Z" fill="url(#copper)"/>
+  </g>
+  <g fill="#F4F1EE">
+    <text x="75" y="29" font-family="Poppins,Arial,sans-serif" font-size="18" font-weight="500" letter-spacing="3.2">FAEL</text>
+    <text x="75" y="48" font-family="Poppins,Arial,sans-serif" font-size="11" font-weight="400" letter-spacing="5.1" opacity="0.72">RECORDS</text>
+  </g>
+</svg>
