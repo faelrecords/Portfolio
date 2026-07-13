@@ -14,6 +14,21 @@ requiredText(content?.brand?.name, "brand.name");
 requiredText(content?.brand?.wordmark, "brand.wordmark");
 requiredText(content?.hero?.title, "hero.title");
 requiredText(content?.hero?.description, "hero.description");
+requiredText(content?.process?.title, "process.title");
+requiredText(content?.projectsIntro?.title, "projectsIntro.title");
+
+if (!Array.isArray(content?.hero?.details) || content.hero.details.length === 0) {
+  errors.push("hero.details precisa ter pelo menos um destaque.");
+}
+
+if (!Array.isArray(content?.process?.steps) || content.process.steps.length === 0) {
+  errors.push("process.steps precisa ter pelo menos uma etapa.");
+} else {
+  content.process.steps.forEach((step, index) => {
+    requiredText(step.title, `process.steps[${index}].title`);
+    requiredText(step.description, `process.steps[${index}].description`);
+  });
+}
 
 if (!Array.isArray(content?.projects) || content.projects.length === 0) {
   errors.push("projects precisa ter pelo menos um projeto.");

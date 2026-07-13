@@ -45,7 +45,8 @@ function detectWebGL() {
 }
 
 function App() {
-  const { brand, navigation, hero, about, capabilities, projects, manifesto, contact } = portfolioContent;
+  const { brand, navigation, hero, about, capabilities, process, projectsIntro, projects, manifesto, contact } =
+    portfolioContent;
   const [quality, setQuality] = useState<RenderQuality>("auto");
   const [reducedMotion, setReducedMotion] = useState(() =>
     window.matchMedia("(prefers-reduced-motion: reduce)").matches,
@@ -198,6 +199,11 @@ function App() {
                   {hero.secondaryAction.label}
                 </a>
               </div>
+              <ul className="hero-details" aria-label="Especialidades">
+                {hero.details.map((detail, index) => (
+                  <li key={detail}><span>{String(index + 1).padStart(2, "0")}</span>{detail}</li>
+                ))}
+              </ul>
             </div>
 
             <div className="hero-telemetry" aria-hidden="true">
@@ -239,16 +245,41 @@ function App() {
           </div>
         </section>
 
+        <section className="process-section section-band" id="processo" aria-labelledby="process-title">
+          <div className="content-frame">
+            <div className="section-index" data-reveal>
+              <span>02</span>
+              <p>{process.eyebrow}</p>
+            </div>
+            <div className="process-heading" data-reveal>
+              <h2 id="process-title">{process.title}</h2>
+              <p>{process.body}</p>
+            </div>
+            <ol className="process-flow">
+              {process.steps.map((step, index) => (
+                <li key={step.title} data-reveal>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         <section className="projects-section section-band" id="plataformas" aria-labelledby="projects-title">
           <GalaxyField quality={quality} reducedMotion={reducedMotion} />
           <div className="content-frame">
             <div className="section-index" data-reveal>
-              <span>02</span>
-              <p>Plataformas em órbita</p>
+              <span>03</span>
+              <p>{projectsIntro.eyebrow}</p>
             </div>
             <div className="projects-heading" data-reveal>
-              <h2 id="projects-title">Produtos digitais para explorar, usar e evoluir.</h2>
-              <p>Uma seleção inicial do ecossistema. Os acessos serão liberados conforme cada plataforma entrar em órbita pública.</p>
+              <h2 id="projects-title">{projectsIntro.title}</h2>
+              <div className="projects-intro-copy">
+                <p>{projectsIntro.body}</p>
+                <span className="projects-metric"><Orbit size={16} />{projectsIntro.metric}</span>
+              </div>
             </div>
 
             <div className="projects-list">
@@ -298,7 +329,7 @@ function App() {
         <section className="contact-section section-band" id="contato" aria-labelledby="contact-title">
           <div className="content-frame">
             <div className="section-index" data-reveal>
-              <span>03</span>
+              <span>04</span>
               <p>{contact.eyebrow}</p>
             </div>
             <div className="contact-grid">

@@ -24,6 +24,7 @@ export interface PortfolioContent {
     eyebrow: string;
     title: string;
     description: string;
+    details: string[];
     primaryAction: { label: string; href: string };
     secondaryAction: { label: string; href: string };
   };
@@ -38,6 +39,18 @@ export interface PortfolioContent {
     title: string;
     description: string;
   }>;
+  process: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    steps: Array<{ title: string; description: string }>;
+  };
+  projectsIntro: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    metric: string;
+  };
   projects: PortfolioProject[];
   manifesto: { eyebrow: string; quote: string };
   contact: {

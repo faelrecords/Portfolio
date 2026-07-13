@@ -2,7 +2,7 @@
   "brand": {
     "name": "Fael Records",
     "wordmark": "Vibecodex",
-    "tagline": "Tecnologia · Criatividade · Produtividade",
+    "tagline": "Tecnologia · Criatividade · Produto",
     "instagram": "https://instagram.com/fael.records"
   },
   "navigation": [
@@ -11,29 +11,47 @@
     { "label": "Contato", "href": "#contato" }
   ],
   "hero": {
-    "eyebrow": "Vibecodex / Sistemas digitais",
+    "eyebrow": "Fael Records / Estúdio digital",
     "title": "Fael Records",
-    "description": "Crio plataformas, sistemas inteligentes e experiências digitais para transformar ideias em produtos que as pessoas realmente querem usar.",
+    "description": "Transformo ideias ambiciosas em plataformas digitais, sistemas inteligentes e experiências que unem tecnologia, clareza e personalidade.",
+    "details": ["Produtos digitais", "IA aplicada", "Sistemas sob medida"],
     "primaryAction": { "label": "Explorar plataformas", "href": "#plataformas" },
-    "secondaryAction": { "label": "Sobre meu trabalho", "href": "#sobre" }
+    "secondaryAction": { "label": "Conhecer o processo", "href": "#processo" }
   },
   "about": {
     "eyebrow": "Além do óbvio",
-    "title": "Ideias entram. Sistemas saem.",
-    "body": "Meu trabalho vive no encontro entre inteligência artificial, design e desenvolvimento. Eu exploro possibilidades, organizo a complexidade e construo experiências digitais que parecem simples porque foram pensadas por inteiro.",
-    "statement": "Não coleciono tendências. Transformo tecnologia em algo útil, desejável e pronto para ganhar o mundo."
+    "title": "Complexidade entra. Clareza vira produto.",
+    "body": "Eu desenho e desenvolvo produtos digitais do primeiro conceito à experiência final. Inteligência artificial, estratégia, interface e código trabalham juntos para transformar possibilidades abertas em sistemas úteis, intuitivos e preparados para evoluir.",
+    "statement": "Cada projeto nasce com uma pergunta simples: como a tecnologia pode ampliar o que as pessoas conseguem fazer?"
   },
   "capabilities": [
-    { "icon": "Sparkles", "title": "IA aplicada", "description": "Agentes, contexto e fluxos inteligentes." },
-    { "icon": "Cpu", "title": "Sistemas web", "description": "Produtos robustos, rápidos e acessíveis." },
-    { "icon": "Workflow", "title": "Automação", "description": "Menos repetição. Mais capacidade de criar." },
-    { "icon": "Layers3", "title": "Design de produto", "description": "Interfaces com clareza e personalidade." }
+    { "icon": "Sparkles", "title": "IA com propósito", "description": "Agentes e experiências inteligentes aplicados a problemas reais." },
+    { "icon": "Cpu", "title": "Produtos web", "description": "Plataformas rápidas, robustas e desenhadas para crescer." },
+    { "icon": "Workflow", "title": "Fluxos autônomos", "description": "Automações que eliminam atrito e devolvem tempo para criar." },
+    { "icon": "Layers3", "title": "Experiência de produto", "description": "Interfaces precisas, acessíveis e com identidade própria." }
   ],
+  "process": {
+    "eyebrow": "Método Vibecodex",
+    "title": "Do primeiro sinal a um sistema em órbita.",
+    "body": "Uma construção contínua, com decisões rápidas, visão de produto e espaço para experimentar sem perder o rumo.",
+    "steps": [
+      { "title": "Descobrir", "description": "Entender o problema, o contexto e a oportunidade real." },
+      { "title": "Estruturar", "description": "Transformar possibilidades em uma direção clara de produto." },
+      { "title": "Construir", "description": "Criar, testar e refinar a experiência em ciclos curtos." },
+      { "title": "Evoluir", "description": "Aprender com o uso e expandir o que gera valor." }
+    ]
+  },
+  "projectsIntro": {
+    "eyebrow": "Plataformas em órbita",
+    "title": "Produtos digitais desenhados para ampliar possibilidades.",
+    "body": "Um ecossistema de ferramentas autorais que conecta inteligência, organização e criatividade. Cada lançamento nasce para resolver algo concreto e continuar evoluindo com quem usa.",
+    "metric": "03 sistemas em desenvolvimento"
+  },
   "projects": [
     {
       "id": "hub",
       "title": "Hub",
-      "summary": "Um ponto central para organizar ferramentas, agentes e experiências do ecossistema Vibecodex.",
+      "summary": "O centro de comando do ecossistema Vibecodex: ferramentas, agentes e fluxos reunidos em uma experiência única, organizada e pronta para agir.",
       "status": "Em breve",
       "tags": ["TypeScript", "IA", "Produtividade"],
       "launchUrl": null,
@@ -42,7 +60,7 @@
     {
       "id": "context",
       "title": "Context",
-      "summary": "Uma camada de contexto para transformar informação dispersa em conhecimento acionável.",
+      "summary": "Uma camada inteligente que conecta informações dispersas, preserva contexto e transforma conhecimento em decisões mais rápidas.",
       "status": "Em breve",
       "tags": ["TypeScript", "Contexto", "Sistemas"],
       "launchUrl": null,
@@ -51,7 +69,7 @@
     {
       "id": "second-brain",
       "title": "SecondBrain",
-      "summary": "Um espaço pessoal para conectar notas, memória e raciocínio assistido por inteligência artificial.",
+      "summary": "Um espaço pessoal para pensar melhor: notas, memória e raciocínio assistido por inteligência artificial trabalhando como um único sistema.",
       "status": "Em breve",
       "tags": ["JavaScript", "Conhecimento", "IA"],
       "launchUrl": null,
@@ -60,12 +78,12 @@
   ],
   "manifesto": {
     "eyebrow": "Manifesto Vibecodex",
-    "quote": "Código é matéria-prima. A experiência é o produto."
+    "quote": "Tecnologia impressiona por um instante. A experiência que ela torna possível é o que permanece."
   },
   "contact": {
     "eyebrow": "Próxima órbita",
-    "title": "Vamos construir algo que ainda não existe.",
-    "body": "Acompanhe os experimentos, explore os projetos ou abra uma conversa sobre a próxima ideia.",
+    "title": "A próxima grande ideia pode começar aqui.",
+    "body": "Acompanhe os experimentos, descubra os próximos lançamentos e abra uma conversa sobre produtos que ainda não existem, mas deveriam.",
     "instagramLabel": "@fael.records"
   }
 }

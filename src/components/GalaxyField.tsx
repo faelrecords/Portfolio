@@ -39,13 +39,13 @@ export function GalaxyField({ quality, reducedMotion }: GalaxyFieldProps) {
     let highQuality = quality === "high" || (quality === "auto" && window.innerWidth >= 820);
 
     const createStars = () => {
-      const count = Math.min(highQuality ? 240 : 110, Math.max(64, Math.round((width * height) / 7200)));
+      const count = Math.min(highQuality ? 360 : 170, Math.max(90, Math.round((width * height) / 4800)));
       stars = Array.from({ length: count }, () => ({
         radius: Math.pow(Math.random(), 0.64),
         angle: Math.random() * Math.PI * 2,
         depth: 0.35 + Math.random() * 0.95,
-        size: 0.35 + Math.random() * 1.45,
-        alpha: 0.16 + Math.random() * 0.62,
+        size: 0.4 + Math.random() * 1.65,
+        alpha: 0.22 + Math.random() * 0.68,
         phase: Math.random() * Math.PI * 2,
         offsetX: 0,
         offsetY: 0,
@@ -87,11 +87,20 @@ export function GalaxyField({ quality, reducedMotion }: GalaxyFieldProps) {
       const centerX = width * 0.62;
       const centerY = height * 0.42;
       const glow = context.createRadialGradient(centerX, centerY, 0, centerX, centerY, Math.max(width, height) * 0.62);
-      glow.addColorStop(0, "rgba(131, 194, 209, 0.085)");
-      glow.addColorStop(0.35, "rgba(82, 120, 135, 0.035)");
+      glow.addColorStop(0, "rgba(131, 194, 209, 0.16)");
+      glow.addColorStop(0.35, "rgba(82, 120, 135, 0.07)");
       glow.addColorStop(1, "rgba(5, 5, 6, 0)");
       context.fillStyle = glow;
       context.fillRect(0, 0, width, height);
+
+      if (pointerActive && !reducedMotion) {
+        const pointerGlow = context.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 190);
+        pointerGlow.addColorStop(0, "rgba(131, 194, 209, 0.14)");
+        pointerGlow.addColorStop(0.4, "rgba(82, 120, 135, 0.055)");
+        pointerGlow.addColorStop(1, "rgba(5, 5, 6, 0)");
+        context.fillStyle = pointerGlow;
+        context.fillRect(mouseX - 190, mouseY - 190, 380, 380);
+      }
     };
 
     const render = (time: number) => {
@@ -126,10 +135,10 @@ export function GalaxyField({ quality, reducedMotion }: GalaxyFieldProps) {
           const differenceX = currentX - mouseX;
           const differenceY = currentY - mouseY;
           const distance = Math.hypot(differenceX, differenceY);
-          const repulsionRadius = 132;
+          const repulsionRadius = 165;
 
           if (distance > 0 && distance < repulsionRadius) {
-            const force = Math.pow((repulsionRadius - distance) / repulsionRadius, 1.7) * 78;
+            const force = Math.pow((repulsionRadius - distance) / repulsionRadius, 1.65) * 112;
             star.velocityX += (differenceX / distance) * force * delta;
             star.velocityY += (differenceY / distance) * force * delta;
           }
