@@ -591,8 +591,24 @@ button {
 }
 
 .projects-section {
+  position: relative;
   overflow: hidden;
   padding: 142px 0 160px;
+}
+
+.projects-galaxy {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
+.projects-section > .content-frame {
+  position: relative;
+  z-index: 1;
 }
 
 .projects-heading {
@@ -1178,5 +1194,9 @@ button {
 
   .cosmic-overlay {
     opacity: 0.58;
+  }
+
+  .projects-galaxy {
+    opacity: 0.62;
   }
 }

@@ -18,6 +18,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { RenderQuality } from "./components/BlackHoleScene";
 import { CosmicOverlay } from "./components/CosmicOverlay";
 import { ExperienceControls } from "./components/ExperienceControls";
+import { GalaxyField } from "./components/GalaxyField";
 import { portfolioContent } from "./content/portfolio";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -239,6 +240,7 @@ function App() {
         </section>
 
         <section className="projects-section section-band" id="plataformas" aria-labelledby="projects-title">
+          <GalaxyField quality={quality} reducedMotion={reducedMotion} />
           <div className="content-frame">
             <div className="section-index" data-reveal>
               <span>02</span>
