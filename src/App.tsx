@@ -1,4 +1,4 @@
-import { lazy, Suspense, useLayoutEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -50,6 +50,18 @@ function App() {
   );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [webglAvailable] = useState(detectWebGL);
+  const [videoState, setVideoState] = useState<"loading" | "ready" | "error">("loading");
+  const heroVideo = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = heroVideo.current;
+    if (!video || videoState !== "ready") return;
+    if (reducedMotion) {
+      video.pause();
+      return;
+    }
+    void video.play().catch(() => setVideoState("error"));
+  }, [reducedMotion, videoState]);
 
   useLayoutEffect(() => {
     const context = gsap.context(() => {
@@ -105,9 +117,27 @@ function App() {
         Pular para o conteúdo
       </a>
 
-      <Suspense fallback={<div className="scene-loading" aria-hidden="true" />}>
-        <BlackHoleScene quality={quality} reducedMotion={reducedMotion} webglAvailable={webglAvailable} />
-      </Suspense>
+      <div className={`hero-video-shell is-${videoState}`} aria-hidden="true">
+        <video
+          ref={heroVideo}
+          className="hero-video"
+          autoPlay={!reducedMotion}
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/og.png"
+          onCanPlay={() => setVideoState("ready")}
+          onError={() => setVideoState("error")}
+        >
+          <source src="/black-hole-hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      {videoState === "error" && (
+        <Suspense fallback={<div className="scene-loading" aria-hidden="true" />}>
+          <BlackHoleScene quality={quality} reducedMotion={reducedMotion} webglAvailable={webglAvailable} />
+        </Suspense>
+      )}
       <div className="scene-shade" aria-hidden="true" />
 
       <header className="site-header">

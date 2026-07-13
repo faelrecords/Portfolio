@@ -91,7 +91,8 @@ button {
 
 .scene-canvas,
 .scene-fallback,
-.scene-loading {
+.scene-loading,
+.hero-video-shell {
   position: fixed;
   inset: 0;
   z-index: -3;
@@ -99,6 +100,29 @@ button {
   height: 100%;
   pointer-events: none;
   background: var(--black);
+}
+
+.hero-video-shell {
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transform: translate(-50%, -50%) scale(1.01);
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.hero-video-shell.is-ready .hero-video {
+  opacity: 1;
 }
 
 .scene-fallback {
@@ -904,6 +928,13 @@ button {
     min-height: 92svh;
   }
 
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-position: 72% 50%;
+    transform: translate(-50%, -50%) scale(1.035);
+  }
+
   .hero-grid {
     display: block;
     min-height: 680px;
@@ -1128,5 +1159,9 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .hero-video {
+    opacity: 1;
   }
 }
