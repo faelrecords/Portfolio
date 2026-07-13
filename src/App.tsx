@@ -16,6 +16,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { RenderQuality } from "./components/BlackHoleScene";
+import { CosmicOverlay } from "./components/CosmicOverlay";
 import { ExperienceControls } from "./components/ExperienceControls";
 import { portfolioContent } from "./content/portfolio";
 
@@ -139,6 +140,7 @@ function App() {
         </Suspense>
       )}
       <div className="scene-shade" aria-hidden="true" />
+      <CosmicOverlay quality={quality} reducedMotion={reducedMotion} />
 
       <header className="site-header">
         <a className="brand-lockup" href="#inicio" aria-label="Fael Records, início">
