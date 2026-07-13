@@ -1,8 +1,0 @@
-{
-  "username": "rafaelrecords",
-  "iterations": 310000,
-  "salt": "lLuzG4Of+qhu9fVpUwYgg/x5C/rw1dW/",
-  "hash": "4ir/O+UtbCirX2PoI8ZE5G6jH4Mu3QMuQbQ5MDL+5b0=",
-  "algorithm": "PBKDF2-SHA256",
-  "note": "Barreira local. A autorização de publicação depende de um token GitHub com permissão restrita."
-}

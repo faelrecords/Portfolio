@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /home/
-Disallow: /adm/
+Allow: /
+
 Sitemap: https://portfolio.vibecodex.pro/sitemap.xml

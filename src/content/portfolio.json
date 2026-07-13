@@ -1,0 +1,86 @@
+{
+  "brand": {
+    "name": "Fael Records",
+    "wordmark": "Vibecodex",
+    "tagline": "Tecnologia · Criatividade · Produtividade",
+    "github": "https://github.com/faelrecords",
+    "instagram": "https://instagram.com/fael.records"
+  },
+  "navigation": [
+    { "label": "Sobre", "href": "#sobre" },
+    { "label": "Plataformas", "href": "#plataformas" },
+    { "label": "Contato", "href": "#contato" }
+  ],
+  "hero": {
+    "eyebrow": "Vibecodex / Sistemas digitais",
+    "title": "Fael Records",
+    "description": "Crio plataformas, sistemas inteligentes e experiências digitais para transformar ideias em produtos que as pessoas realmente querem usar.",
+    "primaryAction": { "label": "Explorar plataformas", "href": "#plataformas" },
+    "secondaryAction": { "label": "Sobre meu trabalho", "href": "#sobre" }
+  },
+  "about": {
+    "eyebrow": "Além do óbvio",
+    "title": "Ideias entram. Sistemas saem.",
+    "body": "Meu trabalho vive no encontro entre inteligência artificial, design e desenvolvimento. Eu exploro possibilidades, organizo a complexidade e construo experiências digitais que parecem simples porque foram pensadas por inteiro.",
+    "statement": "Não coleciono tendências. Transformo tecnologia em algo útil, desejável e pronto para ganhar o mundo."
+  },
+  "capabilities": [
+    { "icon": "Sparkles", "title": "IA aplicada", "description": "Agentes, contexto e fluxos inteligentes." },
+    { "icon": "Cpu", "title": "Sistemas web", "description": "Produtos robustos, rápidos e acessíveis." },
+    { "icon": "Workflow", "title": "Automação", "description": "Menos repetição. Mais capacidade de criar." },
+    { "icon": "Layers3", "title": "Design de produto", "description": "Interfaces com clareza e personalidade." }
+  ],
+  "projects": [
+    {
+      "id": "hub",
+      "title": "Hub",
+      "summary": "Um ponto central para organizar ferramentas, agentes e experiências do ecossistema Vibecodex.",
+      "status": "Em breve",
+      "tags": ["TypeScript", "IA", "Produtividade"],
+      "launchUrl": null,
+      "repositoryUrl": "https://github.com/faelrecords/hub",
+      "featured": true
+    },
+    {
+      "id": "context",
+      "title": "Context",
+      "summary": "Uma camada de contexto para transformar informação dispersa em conhecimento acionável.",
+      "status": "Em breve",
+      "tags": ["TypeScript", "Contexto", "Sistemas"],
+      "launchUrl": null,
+      "repositoryUrl": "https://github.com/faelrecords/Context",
+      "featured": false
+    },
+    {
+      "id": "gtchat",
+      "title": "GTchat",
+      "summary": "Experimentos com agentes especializados, conversas orientadas a tarefas e inteligência aplicada.",
+      "status": "Em breve",
+      "tags": ["Agentes", "IA", "Chat"],
+      "launchUrl": null,
+      "repositoryUrl": "https://github.com/faelrecords/GTchat",
+      "featured": false
+    },
+    {
+      "id": "second-brain",
+      "title": "SecondBrain",
+      "summary": "Um espaço pessoal para conectar notas, memória e raciocínio assistido por inteligência artificial.",
+      "status": "Em breve",
+      "tags": ["JavaScript", "Conhecimento", "IA"],
+      "launchUrl": null,
+      "repositoryUrl": "https://github.com/faelrecords/SecondBrain",
+      "featured": false
+    }
+  ],
+  "manifesto": {
+    "eyebrow": "Manifesto Vibecodex",
+    "quote": "Código é matéria-prima. A experiência é o produto."
+  },
+  "contact": {
+    "eyebrow": "Próxima órbita",
+    "title": "Vamos construir algo que ainda não existe.",
+    "body": "Acompanhe os experimentos, explore os projetos ou abra uma conversa sobre a próxima ideia.",
+    "instagramLabel": "@fael.records",
+    "githubLabel": "faelrecords"
+  }
+}

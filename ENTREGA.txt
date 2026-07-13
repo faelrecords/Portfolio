@@ -1,7 +1,0 @@
-FAEL RECORDS — VIBECODEX
-
-1. Para publicar pelo GitHub Actions, envie todos os arquivos desta pasta para a raiz do repositório faelrecords/Portfolio.
-2. Em Settings > Pages, selecione GitHub Actions.
-3. O site público abre em /home/ e o painel em /adm/.
-4. Leia README.md e DEPLOY-GITHUB.md antes da primeira publicação.
-5. A pasta dist/ contém a versão já compilada.

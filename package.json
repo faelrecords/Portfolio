@@ -1,42 +1,44 @@
 {
-  "name": "fael-records-vibecodex",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build && node scripts/postbuild.mjs",
-    "preview": "vite preview --host 0.0.0.0 --port 4173",
-    "lint": "eslint .",
-    "admin:hash": "node scripts/create-admin-config.mjs",
-    "validate:content": "node scripts/validate-content.mjs"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "Portfólio e hub de ferramentas, agentes de IA, utilidades e materiais de design da Fael Records.",
-  "dependencies": {
-    "lucide-react": "^1.24.0",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@vitejs/plugin-react": "^6.0.3",
-    "eslint": "^9.39.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.26",
-    "globals": "^17.0.0",
-    "vite": "^8.1.4"
-  },
+  "name": "fael-records-immersive-portfolio",
   "private": true,
+  "version": "2.0.0",
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/faelrecords/Portfolio.git"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "lint": "eslint .",
+    "validate:content": "node scripts/validate-content.mjs"
   },
-  "homepage": "https://portfolio.vibecodex.pro/home/"
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.2",
+    "@react-three/postprocessing": "^3.0.4",
+    "gsap": "^3.14.2",
+    "lucide-react": "^0.468.0",
+    "postprocessing": "^6.38.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "three": "^0.182.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^22.19.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.182.0",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^17.0.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.52.0",
+    "vite": "^7.3.1"
+  }
 }
