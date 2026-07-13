@@ -3,7 +3,6 @@ import {
   ArrowDown,
   ArrowUpRight,
   Cpu,
-  Github,
   Instagram,
   Layers3,
   LockKeyhole,
@@ -247,18 +246,6 @@ function App() {
                         <LockKeyhole size={16} /> Em breve
                       </span>
                     )}
-                    {project.repositoryUrl && (
-                      <a
-                        className="repo-link"
-                        href={project.repositoryUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`Ver código de ${project.title} no GitHub`}
-                        title="Ver código no GitHub"
-                      >
-                        <Github size={18} />
-                      </a>
-                    )}
                   </div>
                 </article>
               ))}
@@ -289,11 +276,6 @@ function App() {
                 <a href={brand.instagram} target="_blank" rel="noreferrer">
                   <Instagram size={22} />
                   <span>Instagram<small>{contact.instagramLabel}</small></span>
-                  <ArrowUpRight size={20} />
-                </a>
-                <a href={brand.github} target="_blank" rel="noreferrer">
-                  <Github size={22} />
-                  <span>GitHub<small>{contact.githubLabel}</small></span>
                   <ArrowUpRight size={20} />
                 </a>
               </div>

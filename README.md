@@ -21,4 +21,4 @@ Os textos, projetos, status e links ficam centralizados em `src/content/portfoli
 
 ## Publicação
 
-Todo push na branch `main` executa a validação e publica o conteúdo de `dist` no GitHub Pages. O domínio configurado é `portfolio.vibecodex.pro`.
+Todo push na branch `main` executa a validação e publica automaticamente o conteúdo de `dist`. O domínio configurado é `portfolio.vibecodex.pro`.

@@ -30,7 +30,7 @@ if (!Array.isArray(content?.projects) || content.projects.length === 0) {
     if (!Array.isArray(project.tags) || project.tags.length === 0) {
       errors.push(`${base}.tags precisa ter pelo menos uma tecnologia.`);
     }
-    for (const field of ["launchUrl", "repositoryUrl"]) {
+    for (const field of ["launchUrl"]) {
       const value = project[field];
       if (value !== null && !/^https:\/\//.test(value)) {
         errors.push(`${base}.${field} precisa usar HTTPS ou ser null.`);

@@ -9,7 +9,6 @@ export interface PortfolioProject {
   status: ProjectStatus;
   tags: string[];
   launchUrl: string | null;
-  repositoryUrl: string | null;
   featured: boolean;
 }
 
@@ -18,7 +17,6 @@ export interface PortfolioContent {
     name: string;
     wordmark: string;
     tagline: string;
-    github: string;
     instagram: string;
   };
   navigation: Array<{ label: string; href: string }>;
@@ -47,7 +45,6 @@ export interface PortfolioContent {
     title: string;
     body: string;
     instagramLabel: string;
-    githubLabel: string;
   };
 }
 

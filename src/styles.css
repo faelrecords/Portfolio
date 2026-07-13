@@ -704,22 +704,6 @@ button {
   cursor: not-allowed;
 }
 
-.repo-link {
-  display: grid;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  color: var(--muted);
-  transition: color 180ms ease, border-color 180ms ease;
-}
-
-.repo-link:hover {
-  border-color: var(--accent);
-  color: var(--accent-light);
-}
-
 .manifesto-section {
   position: relative;
   display: flex;
