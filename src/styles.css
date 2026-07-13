@@ -1,20 +1,20 @@
 :root {
   color-scheme: dark;
   font-family: "Manrope Variable", "Segoe UI", sans-serif;
-  color: #f3ede7;
+  color: #f2f6f7;
   background: #050506;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --ink: #f3ede7;
-  --muted: #aaa29c;
-  --dim: #726d69;
+  --ink: #f2f6f7;
+  --muted: #aab6bc;
+  --dim: #6f7c82;
   --black: #050506;
   --panel: rgba(8, 8, 10, 0.88);
-  --line: rgba(243, 237, 231, 0.17);
-  --line-strong: rgba(243, 237, 231, 0.34);
-  --accent: #c15f3c;
-  --accent-light: #e58a66;
-  --signal: #78d7e6;
+  --line: rgba(226, 239, 244, 0.17);
+  --line-strong: rgba(226, 239, 244, 0.34);
+  --accent: #527887;
+  --accent-light: #b9d2dc;
+  --signal: #83c2d1;
   --header-height: 76px;
 }
 
@@ -160,7 +160,7 @@ button {
   align-items: center;
   min-height: var(--header-height);
   padding: 0 32px;
-  border-bottom: 1px solid rgba(243, 237, 231, 0.11);
+  border-bottom: 1px solid rgba(226, 239, 244, 0.11);
   background: rgba(5, 5, 6, 0.72);
   backdrop-filter: blur(16px);
 }
@@ -236,7 +236,7 @@ button {
 
 .icon-button:hover {
   border-color: var(--accent);
-  background: rgba(193, 95, 60, 0.14);
+  background: rgba(82, 120, 135, 0.2);
   color: var(--accent-light);
 }
 
@@ -337,7 +337,7 @@ button {
 
 .motion-toggle input:checked + .toggle-track {
   border-color: var(--accent);
-  background: rgba(193, 95, 60, 0.26);
+  background: rgba(82, 120, 135, 0.34);
 }
 
 .motion-toggle input:checked + .toggle-track span {
@@ -391,7 +391,7 @@ button {
   height: 7px;
   border-radius: 50%;
   background: var(--signal);
-  box-shadow: 0 0 16px rgba(120, 215, 230, 0.8);
+  box-shadow: 0 0 16px rgba(131, 194, 209, 0.8);
 }
 
 .hero-copy h1 {
@@ -407,12 +407,13 @@ button {
 
 .accent-word {
   color: var(--accent-light);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.92), 0 10px 42px rgba(0, 0, 0, 0.96);
 }
 
 .hero-description {
   max-width: 620px;
   margin: 42px 0 0;
-  color: #d3cbc5;
+  color: #d4dde1;
   font-size: 1.12rem;
   line-height: 1.78;
 }
@@ -448,7 +449,7 @@ button {
 }
 
 .button-primary:hover {
-  background: #d46c46;
+  background: #628b9a;
 }
 
 .button-secondary {
@@ -528,7 +529,7 @@ button {
 
 .about-copy p {
   margin: 0;
-  color: #cbc3bd;
+  color: #c6d1d5;
   font-size: 1.06rem;
   line-height: 1.85;
 }
@@ -614,12 +615,12 @@ button {
 }
 
 .project-row:hover {
-  background: rgba(193, 95, 60, 0.055);
+  background: rgba(82, 120, 135, 0.08);
 }
 
 .project-row.is-featured {
   min-height: 310px;
-  border-bottom-color: rgba(193, 95, 60, 0.72);
+  border-bottom-color: rgba(131, 194, 209, 0.72);
 }
 
 .project-number {
@@ -674,7 +675,7 @@ button {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #c2bab4;
+  color: #bcc9ce;
   font-size: 0.72rem;
   text-transform: uppercase;
 }
@@ -708,7 +709,7 @@ button {
   height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 14px rgba(193, 95, 60, 0.7);
+  box-shadow: 0 0 14px rgba(131, 194, 209, 0.7);
 }
 
 .project-link {

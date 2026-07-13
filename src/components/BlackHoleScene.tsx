@@ -82,14 +82,14 @@ function BlackHole({ reducedMotion, quality }: { reducedMotion: boolean; quality
   const diskUniforms = useMemo(
     () => ({
       uTime: { value: 0 },
-      uAccent: { value: new THREE.Color("#c15f3c") },
-      uHot: { value: new THREE.Color("#fff2df") },
-      uCool: { value: new THREE.Color("#78d7e6") },
+      uAccent: { value: new THREE.Color("#527887") },
+      uHot: { value: new THREE.Color("#f2f7f9") },
+      uCool: { value: new THREE.Color("#83c2d1") },
     }),
     [],
   );
   const haloUniforms = useMemo(
-    () => ({ uColor: { value: new THREE.Color("#c15f3c") } }),
+    () => ({ uColor: { value: new THREE.Color("#83c2d1") } }),
     [],
   );
 
@@ -168,12 +168,12 @@ function BlackHole({ reducedMotion, quality }: { reducedMotion: boolean; quality
         </mesh>
         <mesh>
           <torusGeometry args={[1.26, 0.028, 18, quality === "low" ? 128 : 256]} />
-          <meshBasicMaterial color="#fff5e8" toneMapped={false} />
+          <meshBasicMaterial color="#f2f7f9" toneMapped={false} />
         </mesh>
         <mesh scale={1.08}>
           <torusGeometry args={[1.29, 0.018, 14, 192]} />
           <meshBasicMaterial
-            color="#c15f3c"
+            color="#83c2d1"
             transparent
             opacity={0.62}
             blending={THREE.AdditiveBlending}
